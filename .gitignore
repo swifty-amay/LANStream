@@ -1,0 +1,33 @@
+# === Xcode / build products ===
+DerivedData/
+build/
+*.xcuserstate
+*.xcuserdatad/
+xcuserdata/
+
+# === Swift Package Manager ===
+.build/
+.swiftpm/
+# Package.resolved is intentionally NOT ignored for app projects —
+# it locks dependency versions (e.g. Vapor) so every teammate builds
+# against identical versions. Keep it tracked.
+
+# === CocoaPods (only relevant if you ever add it) ===
+Pods/
+
+# === macOS system files ===
+.DS_Store
+
+# === Code signing / secrets (never commit these) ===
+*.mobileprovision
+*.p12
+*.cer
+.env
+Secrets.swift
+Config.local.swift
+
+# === App's Public directory ===
+# Keep the folder itself (so FileMiddleware's path exists after a
+# fresh clone), but don't track whatever files get dropped into it.
+Public/*
+!Public/.gitkeep
