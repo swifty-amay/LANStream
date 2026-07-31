@@ -12,7 +12,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A58C498F301BCC4E00A1E540 /* LANStream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = LANStream.app; path = /Users/amayrajsrivastav/Development/LANStream/LANStream/build/Debug/LANStream.app; sourceTree = "<absolute>"; };
+		A50B71D8301C549400201CCC /* LANStream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LANStream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5F524C1301B12FF00849FAA /* Public */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Public; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,6 +41,7 @@
 			children = (
 				A5F524C1301B12FF00849FAA /* Public */,
 				A5E2042C301A0CFB0017D90F /* LANStream */,
+				A50B71D8301C549400201CCC /* LANStream.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,7 +68,7 @@
 				A5E20439301A26F50017D90F /* Vapor */,
 			);
 			productName = LANStream;
-			productReference = A58C498F301BCC4E00A1E540 /* LANStream.app */;
+			productReference = A50B71D8301C549400201CCC /* LANStream.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */

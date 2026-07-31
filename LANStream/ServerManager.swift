@@ -27,7 +27,9 @@ class ServerManager: ObservableObject{
         
         
         do{
-            try newApp.middleware.use(FileMiddleware(bundle: Bundle.main))
+//            try newApp.middleware.use(FileMiddleware(bundle: Bundle.main))
+            let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.path()
+            newApp.middleware.use(FileMiddleware(publicDirectory: documentsPath))
             try routes(newApp)
         } catch{
             print("\(error)")
