@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct LANStreamApp: App {
+    init(){
+        clearDocumentDirectory()
+    }
     var body: some Scene {
         WindowGroup {
             ContentView()
