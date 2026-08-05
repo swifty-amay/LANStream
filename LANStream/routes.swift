@@ -14,4 +14,8 @@ func routes(_ app: Application) throws{
         "Hello Everyone! This is swifty-amay's backend. Welcome to the Vapor world."
     }
     
+    app.get("leaf"){req -> View in
+        return try await req.view.render("hello", ["name": "Leaf"])
+    }
+    
 }

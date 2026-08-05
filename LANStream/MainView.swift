@@ -20,6 +20,7 @@ struct MainView: View {
                 }
                 else{
                     server.start()
+                    print("Fetched files List: \(fetchFilesList())")
                 }
             }
             FilePickerView()

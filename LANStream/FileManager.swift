@@ -59,3 +59,19 @@ func clearDocumentDirectory(){
         print("Failed to list Documents Directory: \(error)")
     }
 }
+
+func fetchFilesList() -> [String]{
+    var filesList: [String] = []
+    let documentURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+    do{
+        
+        let files = try FileManager.default.contentsOfDirectory(at: documentURL, includingPropertiesForKeys: nil)
+        for file in files{
+            let fileName = file.lastPathComponent
+            filesList.append(fileName)
+        }
+    } catch{
+        print("No files found")
+    }
+    return filesList
+}

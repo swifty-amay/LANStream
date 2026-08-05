@@ -8,6 +8,8 @@
 import Foundation
 import Vapor
 internal import Combine
+import Leaf
+
 
 @MainActor
 class ServerManager: ObservableObject{
@@ -24,6 +26,10 @@ class ServerManager: ObservableObject{
         newApp.http.server.configuration.hostname = "127.0.0.1"
         newApp.http.server.configuration.port = 8080
         
+        if let resourcePath = Bundle.main.resourcePath{
+            newApp.leaf.configuration.rootDirectory = resourcePath + "/Resources/Views/"
+        }
+        newApp.views.use(.leaf)
         
         
         do{

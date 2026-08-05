@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A50B4A143023AA2B00623A3C /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = A50B4A133023AA2B00623A3C /* Resources */; };
+		A50B4A173023AADF00623A3C /* Leaf in Frameworks */ = {isa = PBXBuildFile; productRef = A50B4A163023AADF00623A3C /* Leaf */; };
 		A5E2043A301A26F50017D90F /* Vapor in Frameworks */ = {isa = PBXBuildFile; productRef = A5E20439301A26F50017D90F /* Vapor */; };
 		A5F524C2301B12FF00849FAA /* Public in Resources */ = {isa = PBXBuildFile; fileRef = A5F524C1301B12FF00849FAA /* Public */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A50B4A133023AA2B00623A3C /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 		A50B71D8301C549400201CCC /* LANStream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LANStream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5F524C1301B12FF00849FAA /* Public */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Public; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -29,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A50B4A173023AADF00623A3C /* Leaf in Frameworks */,
 				A5E2043A301A26F50017D90F /* Vapor in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -39,6 +43,7 @@
 		A5E20421301A0CFB0017D90F = {
 			isa = PBXGroup;
 			children = (
+				A50B4A133023AA2B00623A3C /* Resources */,
 				A5F524C1301B12FF00849FAA /* Public */,
 				A5E2042C301A0CFB0017D90F /* LANStream */,
 				A50B71D8301C549400201CCC /* LANStream.app */,
@@ -66,6 +71,7 @@
 			name = LANStream;
 			packageProductDependencies = (
 				A5E20439301A26F50017D90F /* Vapor */,
+				A50B4A163023AADF00623A3C /* Leaf */,
 			);
 			productName = LANStream;
 			productReference = A50B71D8301C549400201CCC /* LANStream.app */;
@@ -97,6 +103,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				A5E20438301A26F50017D90F /* XCRemoteSwiftPackageReference "vapor" */,
+				A50B4A153023AADF00623A3C /* XCRemoteSwiftPackageReference "leaf" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A5E20421301A0CFB0017D90F;
@@ -113,6 +120,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A50B4A143023AA2B00623A3C /* Resources in Resources */,
 				A5F524C2301B12FF00849FAA /* Public in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,6 +390,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A50B4A153023AADF00623A3C /* XCRemoteSwiftPackageReference "leaf" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vapor/leaf.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.2;
+			};
+		};
 		A5E20438301A26F50017D90F /* XCRemoteSwiftPackageReference "vapor" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/vapor/vapor.git";
@@ -393,6 +409,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A50B4A163023AADF00623A3C /* Leaf */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A50B4A153023AADF00623A3C /* XCRemoteSwiftPackageReference "leaf" */;
+			productName = Leaf;
+		};
 		A5E20439301A26F50017D90F /* Vapor */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A5E20438301A26F50017D90F /* XCRemoteSwiftPackageReference "vapor" */;
