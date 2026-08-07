@@ -18,4 +18,11 @@ func routes(_ app: Application) throws{
         return try await req.view.render("hello", ["name": "Leaf"])
     }
     
+    app.get("files"){req -> View in
+        let fileList = fetchFilesList()
+        let context = Files(files: fileList)
+        print(context)
+        return try await req.view.render("file", context)
+    }
+    
 }

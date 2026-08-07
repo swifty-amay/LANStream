@@ -34,6 +34,7 @@ func importSelectedFiles(_ urls: [URL]) {
         } catch{
             print("Failed to copy \(destinationURL.lastPathComponent): \(error)")
         }
+        
     }
 }
 
@@ -75,3 +76,4 @@ func fetchFilesList() -> [String]{
     }
     return filesList
 }
+

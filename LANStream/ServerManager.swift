@@ -62,6 +62,4 @@ class ServerManager: ObservableObject{
             app = nil
             isRunning = false
         }
-        
-    
 }

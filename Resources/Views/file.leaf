@@ -1,0 +1,14 @@
+#extend("main"):
+    #export("body"):
+        <h1>Hi, Click on the below files to stream them...</h1>
+        
+        <ul>
+        #for(file in files):
+        <p>
+        <li><a href="http://localhost:8080/#(file)" target="_blank">#(file)</li>
+        </p>
+        #endfor
+        </ul>
+        
+    #endexport
+#endextend
