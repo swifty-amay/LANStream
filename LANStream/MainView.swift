@@ -11,6 +11,7 @@ struct MainView: View {
     @StateObject private var server = ServerManager()
     var body: some View {
         VStack(spacing: 20) {
+            BouncingDotHi()
             Text(server.isRunning ? "Server Running 🟢" : "Server Stopped 🔴")
                 .font(.headline)
             
