@@ -20,9 +20,15 @@ func routes(_ app: Application) throws{
     
     app.get("files"){req -> View in
         let fileList = fetchFilesList()
-        let context = Files(files: fileList)
-        print(context)
-        return try await req.view.render("file", context)
+        if let ip = getWiFiIPAddress(){
+            
+            let context = Files(files: fileList, ip: ip)
+            print(context)
+            
+            return try await req.view.render("file", context)
+        } else{
+            return try await req.view.render("file", Files(files: [], ip: ""))
+        }
     }
     
 }

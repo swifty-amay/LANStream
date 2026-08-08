@@ -9,5 +9,6 @@ import Foundation
 
 nonisolated struct Files: Encodable{
     let files: [String]
+    let ip: String
     
 }

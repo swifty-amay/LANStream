@@ -5,7 +5,7 @@
         <ul>
         #for(file in files):
         <p>
-        <li><a href="http://localhost:8080/#(file)" target="_blank">#(file)</li>
+        <li><a href="http://#(ip):8080/#(file)" target="_blank">#(file)</li>
         </p>
         #endfor
         </ul>

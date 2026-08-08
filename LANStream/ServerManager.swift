@@ -23,8 +23,10 @@ class ServerManager: ObservableObject{
         let newApp = Application(env)
         
         //Configuration
-        newApp.http.server.configuration.hostname = "127.0.0.1"
+        newApp.http.server.configuration.hostname = "0.0.0.0"
         newApp.http.server.configuration.port = 8080
+        
+        
         
         if let resourcePath = Bundle.main.resourcePath{
             newApp.leaf.configuration.rootDirectory = resourcePath + "/Resources/Views/"
